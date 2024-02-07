@@ -12,8 +12,11 @@
 // import CardFile from "./components/bootstrap/card";
 
 
-import Circles from "./components/circle task/circle";
+// import Circles from "./components/circle task/circle";
 import Controlled from "./components/formtypes/controlled";
+// import MainPage from "./components/task/main";
+
+import Navigation from "./navigationScreen/navigation";
 // import Uncontrolled from "./components/formtypes/uncontrolled";
 
 // import UsestateExample from "./components/hooks/usestate/usestate";
@@ -60,7 +63,17 @@ function app(){
     {/* <Usestateex3/> */}
     {/* <Uncontrolled/> */}
     {/* <Controlled/> */}
-   <Circles/>
+   {/* <Circles/> */}
+
+    <Navigation/>
+    {/* <MainPage/> */}
+
+   
+
+
+
+
+
     </div>
   )
 }

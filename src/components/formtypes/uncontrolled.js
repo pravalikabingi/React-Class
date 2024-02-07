@@ -1,9 +1,12 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { DataShare } from "../../navigationScreen/navigation";
 
 const Uncontrolled = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const[error,seterror]=useState("")
+
+  const {loginTrue}=useContext(DataShare)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,6 +39,9 @@ const Uncontrolled = () => {
         }
         else{
             alert("successfull login")
+            loginTrue()
+            localStorage.setItem("userLoginInfo",res.data)
+            seterror("")
         }
       })
       .catch(err => console.log(err));
